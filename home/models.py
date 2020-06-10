@@ -9,24 +9,3 @@ class HomePage(Page):
         FieldPanel('body', classname="full"),
     ]
 
-    # Application definition
-INSTALLED_APPS = [
-    'home',
-    'search',
-    'blog',
-...]
-class BlogIndexPage(Page):
-    intro = RichTextField(blank=True)
-    content_panels = Page.content_panels + [
-    FieldPanel('intro', classname="full")
-]
-
-class BlogPage(Page):
-    date = models.DateField("Post date")
-    intro = models.CharField(max_length=250)
-    body = RichTextField(blank=True)
-    content_panels = Page.content_panels + [
-        FieldPanel('date'),
-        FieldPanel('intro'),
-        FieldPanel('body', classname="full"),
-    ]
